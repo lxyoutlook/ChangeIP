@@ -23,10 +23,10 @@ if %KEY% == 2 goto TWO
 if %KEY% == 0 exit
 
 :ONE
-set ip=10.112.1.198
+set ip=192.168.1.198
 set subnetmask=255.255.255.0
-set gateway=10.112.1.2
-set dns1=10.112.1.2
+set gateway=192.168.1.2
+set dns1=192.168.1.2
 set dns2=223.5.5.5
 
 echo Setting IP to private. Please wait for a few seconds......
