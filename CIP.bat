@@ -21,12 +21,13 @@ set /p KEY= Your choice is:
 if %KEY% == 1 goto ONE  
 if %KEY% == 2 goto TWO  
 if %KEY% == 0 exit
+if not %KEY% == 1 (if not %KEY% == 2 goto QUIT)
 
 :ONE
-set ip=192.168.1.198
+set ip=10.112.1.198
 set subnetmask=255.255.255.0
-set gateway=192.168.1.2
-set dns1=192.168.1.2
+set gateway=10.112.1.2
+set dns1=10.112.1.2
 set dns2=223.5.5.5
 
 echo Setting IP to private. Please wait for a few seconds......
@@ -55,4 +56,7 @@ netsh interface ip show dns name=%netname%
 pause
 exit
 
-
+:QUIT
+echo Your input is wrong, please try me later. Bye!
+pause
+exit
