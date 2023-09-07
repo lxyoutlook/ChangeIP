@@ -32,7 +32,7 @@ set dns2=223.5.5.5
 
 echo Setting IP to private. Please wait for a few seconds......
 netsh interface ip set address name=%netname% source=static addr=%ip% mask=%subnetmask% gateway=%gateway% gwmetric=1
-netsh interface ip set dns name=%netname% source=static addr=%dns1% register=primary
+netsh interface ip set dns name=%netname% source=static addr=%dns1% register=primary validate=no
 REM netsh interface ip add dns %netname%  %dns2%
 timeout /T 5
 echo Private IP is set done.
